@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados da Inscrição - AI Hub</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Bootstrap responsivo -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <svg class="logo-icon me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="fw-bold">AI Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door me-1"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ferramentas.html">
+                            <i class="bi bi-tools me-1"></i> Ferramentas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demo.html">
+                            <i class="bi bi-chat-dots me-1"></i> Demo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estatistica.html">
+                            <i class="bi bi-bar-chart me-1"></i> Estatísticas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">
+                            <i class="bi bi-newspaper me-1"></i> Notícias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html">
+                            <i class="bi bi-book me-1"></i> Cursos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <i class="bi bi-check-circle-fill text-white" style="font-size: 64px;"></i>
+            </div>
+            <h1 class="page-title">Inscrição Realizada com Sucesso!</h1>
+            <p class="page-subtitle">Confira os dados da sua inscrição abaixo</p>
+        </div>
+    </section>
+
+    <!-- Dados do Formulário -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Card de Confirmação -->
+                    <div class="card border-0 shadow-lg rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="feature-icon gradient-1 me-3">
+                                    <i class="bi bi-person-check"></i>
+                                </div>
+                                <div>
+                                    <h2 class="h4 mb-1 fw-bold">Dados Pessoais</h2>
+                                    <p class="text-muted mb-0 small">Informações básicas do inscrito</p>
+                                </div>
+                                <div class="d-flex ms-auto">
+                                    <i class="bi bi-trash3" onclick="limparDados()"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-person text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="text-muted small mb-1">Nome Completo</p>
+                                            <!-- Aqui você vai inserir o nome via JavaScript -->
+                                            <p class="fw-semibold mb-0" id="displayName">-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-envelope text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="text-muted small mb-1">Email</p>
+                                            <!-- Aqui você vai inserir o email via JavaScript -->
+                                            <p class="fw-semibold mb-0" id="displayEmail">-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-telephone text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="text-muted small mb-1">Telefone</p>
+                                            <!-- Aqui você vai inserir o telefone via JavaScript -->
+                                            <p class="fw-semibold mb-0" id="displayPhone">-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-briefcase text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="text-muted small mb-1">Área de Atuação</p>
+                                            <!-- Aqui você vai inserir a área via JavaScript -->
+                                            <p class="fw-semibold mb-0" id="displayWorkArea">-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card de Curso -->
+                    <div class="card border-0 shadow-lg rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="feature-icon gradient-2 me-3">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <div>
+                                    <h2 class="h4 mb-1 fw-bold">Informações do Curso</h2>
+                                    <p class="text-muted mb-0 small">Curso selecionado e nível de experiência</p>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-mortarboard text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="text-muted small mb-1">Curso de Interesse</p>
+                                            <!-- Aqui você vai inserir o curso via JavaScript -->
+                                            <p class="fw-semibold mb-0" id="displayCourse">-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-bar-chart text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="text-muted small mb-1">Nível de Experiência</p>
+                                            <!-- Aqui você vai inserir o nível via JavaScript -->
+                                            <p class="fw-semibold mb-0" id="displayLevel">-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card de Objetivos -->
+                    <div class="card border-0 shadow-lg rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="feature-icon gradient-3 me-3">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <div>
+                                    <h2 class="h4 mb-1 fw-bold">Objetivos com o Curso</h2>
+                                    <p class="text-muted mb-0 small">Expectativas e metas do aluno</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-chat-left-quote text-primary me-3 fs-5"></i>
+                                <div class="flex-grow-1">
+                                    <p class="text-muted small mb-2">Descrição dos Objetivos</p>
+                                    <!-- Aqui você vai inserir os objetivos via JavaScript -->
+                                    <div class="bg-light rounded-3 p-3">
+                                        <p class="mb-0" id="displayObjectives">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card de Preferências -->
+                    <div class="card border-0 shadow-lg rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="feature-icon gradient-4 me-3">
+                                    <i class="bi bi-gear"></i>
+                                </div>
+                                <div>
+                                    <h2 class="h4 mb-1 fw-bold">Preferências</h2>
+                                    <p class="text-muted mb-0 small">Configurações e notificações</p>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-bell text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="mb-0">Receber newsletter</p>
+                                            <!-- Aqui você vai inserir o status via JavaScript -->
+                                            <span class="badge bg-primary" id="displayNewsletter">Sim</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-check text-primary me-3 fs-5"></i>
+                                        <div>
+                                            <p class="mb-0">Termos aceitos</p>
+                                            <!-- Aqui você vai inserir o status via JavaScript -->
+                                            <span class="badge bg-success" id="displayTerms">Sim</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data e Hora da Inscrição -->
+                    <div class="card border-0 shadow-lg rounded-4 mb-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="card-body p-4 text-white">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-calendar-check fs-1 me-4"></i>
+                                <div>
+                                    <p class="mb-1 opacity-75 small">Data e Hora da Inscrição</p>
+                                    <!-- Aqui você vai inserir a data/hora via JavaScript -->
+                                    <h3 class="h5 mb-0 fw-bold" id="displayDateTime">-</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ações -->
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="forms.html" class="btn btn-outline-primary btn-lg d-flex align-items-center gap-2">
+                            <i class="bi bi-arrow-left"></i>
+                            Voltar ao Formulário
+                        </a>
+                        <button class="btn btn-primary btn-lg d-flex align-items-center gap-2" onclick="window.print()">
+                            <i class="bi bi-printer"></i>
+                            Imprimir Comprovante
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">AI Hub</h3>
+                    <p class="footer-text">Sua plataforma completa para explorar e interagir com as mais avançadas tecnologias de inteligência artificial.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <a href="ferramentas.html" class="footer-link">Ferramentas</a>
+                    <a href="demo.html" class="footer-link">Demo</a>
+                    <a href="estatistica.html" class="footer-link">Estatísticas</a>
+                    <a href="noticias.html" class="footer-link">Notícias</a>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Recursos</h3>
+                    <a href="#" class="footer-link">Documentação</a>
+                    <a href="#" class="footer-link">API</a>
+                    <a href="#" class="footer-link">Tutoriais</a>
+                    <a href="#" class="footer-link">Suporte</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Hub. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/dados-formulario.js"></script>
+</body>
+</html>

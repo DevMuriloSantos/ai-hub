@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas - AI Hub</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Substituindo header por navbar Bootstrap responsivo -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <svg class="logo-icon me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="fw-bold">AI Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door me-1"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ferramentas.html">
+                            <i class="bi bi-tools me-1"></i> Ferramentas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demo.html">
+                            <i class="bi bi-chat-dots me-1"></i> Demo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estatistica.html">
+                            <i class="bi bi-bar-chart me-1"></i> Estatísticas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">
+                            <i class="bi bi-newspaper me-1"></i> Notícias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html">
+                            <i class="bi bi-book me-1"></i> Cursos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Ferramentas de IA</h1>
+            <p class="page-subtitle">Explore nossa coleção de ferramentas inteligentes para transformar seu trabalho</p>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="text-generator">
+                    <div class="tool-icon gradient-1">
+                        <!-- Substituindo SVG por Bootstrap Icons -->
+                        <i class="bi bi-file-text"></i>
+                    </div>
+                    <h3 class="tool-title">Gerador de Texto</h3>
+                    <p class="tool-description">Crie textos automaticamente usando algoritmos avançados de processamento de linguagem natural</p>
+                    <button class="tool-button">
+                        Experimentar
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="image-analyzer">
+                    <div class="tool-icon gradient-2">
+                        <i class="bi bi-image"></i>
+                    </div>
+                    <h3 class="tool-title">Analisador de Imagens</h3>
+                    <p class="tool-description">Analise e descreva imagens usando tecnologia de visão computacional avançada</p>
+                    <button class="tool-button">
+                        Experimentar
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="sentiment-analyzer">
+                    <div class="tool-icon gradient-3">
+                        <i class="bi bi-emoji-smile"></i>
+                    </div>
+                    <h3 class="tool-title">Análise de Sentimentos</h3>
+                    <p class="tool-description">Determine o sentimento e emoção por trás de textos e comentários</p>
+                    <button class="tool-button">
+                        Experimentar
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="translator">
+                    <div class="tool-icon gradient-4">
+                        <i class="bi bi-translate"></i>
+                    </div>
+                    <h3 class="tool-title">Tradutor Inteligente</h3>
+                    <p class="tool-description">Traduza textos entre diferentes idiomas com precisão avançada</p>
+                    <button class="tool-button">
+                        Experimentar
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="code-generator">
+                    <div class="tool-icon gradient-5">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h3 class="tool-title">Gerador de Código</h3>
+                    <p class="tool-description">Gere código automaticamente em diferentes linguagens de programação</p>
+                    <button class="tool-button">
+                        Experimentar
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="data-predictor">
+                    <div class="tool-icon gradient-6">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3 class="tool-title">Preditor de Dados</h3>
+                    <p class="tool-description">Faça previsões e análises baseadas em dados históricos</p>
+                    <button class="tool-button">
+                        Experimentar
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">AI Hub</h3>
+                    <p class="footer-text">Sua plataforma completa para explorar e interagir com as mais avançadas tecnologias de inteligência artificial.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <a href="ferramentas.html" class="footer-link">Ferramentas</a>
+                    <a href="demo.html" class="footer-link">Demo</a>
+                    <a href="estatistica.html" class="footer-link">Estatísticas</a>
+                    <a href="noticias.html" class="footer-link">Notícias</a>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Recursos</h3>
+                    <a href="#" class="footer-link">Documentação</a>
+                    <a href="#" class="footer-link">API</a>
+                    <a href="#" class="footer-link">Tutoriais</a>
+                    <a href="#" class="footer-link">Suporte</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Hub. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="js/tools.js"></script>
+</body>
+</html>
